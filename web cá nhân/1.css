@@ -48,6 +48,7 @@ header h1 {
 
 #about li {
   list-style-type: none;
+  margin-left: -19px;
 }
 
 h2 {
