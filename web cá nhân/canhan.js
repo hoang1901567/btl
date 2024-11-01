@@ -1,23 +1,29 @@
-// Chế độ tối
+document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+  }
+});
+
 function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.setItem("darkMode", "disabled");
   }
-  
-  }
-  
-  // Thông báo chào mừng
-  function welcomeMessage() {
-    alert("Chào mừng bạn đến với trang cá nhân của tôi!");
-  }
-  
-  // Phóng to/thu nhỏ ảnh
-  function toggleImageSize(image) {
-    image.classList.toggle('large-image');
-  }
-  
-  // Gọi các hàm khi trang được tải
-  window.onload = function() {
-    showDate();
-    welcomeMessage();
-  };
-  
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    section.querySelector("h2").addEventListener("click", function () {
+      const content = section.querySelector("ul") || section.querySelector("p") || section.querySelector("img");
+
+      if (content) {
+        content.style.display = content.style.display === "none" ? "block" : "none";
+      }
+    });
+  });
+});

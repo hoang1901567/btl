@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
 
   <meta charset="UTF-8">
@@ -7,18 +8,20 @@
   <title>Trang cá nhân</title>
   <link rel="stylesheet" href="1.css">
 </head>
+
 <body>
   <div class="container">
     <header>
       <h1>Trang cá nhân của tôi</h1>
     </header>
-
+    <img src="myimg.jpg" alt="Huy Hoàng" class="profile-pic">
     <section id="about">
       <h2>Giới thiệu</h2>
-      <p>Khúc Ngọc Huy Hoàng</p>
-      <p>Tôi năm nay 19 tuổi.</p>
-      <p>Hiện đang là sinh viên năm 2 trường Đại học Thủ Đô Hà Nội</p>
-      <img src="myimg.jpg" alt="Huy Hoàng" class="profile-pic">
+      <ul>
+        <li>Khúc Ngọc Huy Hoàng</li>
+        <li>Tôi năm nay 19 tuổi.</li>
+        <li>Hiện đang là sinh viên năm 2 trường Đại học Thủ Đô Hà Nội</li>
+      </ul>
     </section>
 
     <section id="interests">
@@ -31,11 +34,13 @@
       </ul>
     </section>
     <section id="Introduce myself">
-<h2>Đôi nét về bản thân</h2>
-<ul>
-  <li>Được nhận xét là một người hòa đồng, vui tính, biết lắng nghe, quan tâm chia sẻ với mọi người xung quanh.</li>
-  <li>Mong muốn trong tương lai sẽ trở thành một Web Developer chuyên nghiệp, tạo ra được những trang web hay ho, tiện ích cho người sử dụng</li>
-</ul>
+      <h2>Đôi nét về bản thân</h2>
+      <ul>
+        <li>Được nhận xét là một người hòa đồng, vui tính, biết lắng nghe, quan tâm chia sẻ với mọi người xung quanh.
+        </li>
+        <li>Mong muốn trong tương lai sẽ trở thành một Web Developer chuyên nghiệp, tạo ra được những trang web hay ho,
+          tiện ích cho người sử dụng</li>
+      </ul>
     </section>
     <section id="skills">
       <h2>Kỹ năng</h2>
@@ -48,11 +53,12 @@
     </section>
 
     <footer>
-      <button >kỹ năng</button>
+      <button onclick="toggleDarkMode()">Chế độ tối</button>
     </footer>
   </div>
 
   <script src="canhan.js"></script>
 
 </body>
+
 </html>
