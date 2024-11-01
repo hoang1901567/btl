@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Nhóm</title>
+    <style>
+        /* Reset mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f75200;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: #ffffff;
+        }
+        /* Thanh tiêu đề */
+        .header {
+            width: 100%;
+            background-color: #ff5a00;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            position: relative;
+        }
+        .header img {
+            height: 40px;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+        .header h1 {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+        /* Thanh tìm kiếm */
+        .search-bar {
+            width: 60%;
+            max-width: 400px;
+            position: relative;
+            margin: 15px 0;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px 40px 10px 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-bar .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2em;
+        }
+        .header-icons {
+            font-size: 1.5em;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        /* Khối chính */
+        .container {
+            background-color: #ff6d00;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+            color: #ffffff;
+        }
+        .container h2 {
+            background-color: #ff884d;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        /* Thành viên */
+        .members {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .member {
+            background-color: #ffffff;
+            border-radius: 5px;
+            width: 22%;
+            min-width: 150px;
+            text-align: center;
+            color: #000000;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .member img {
+            width: 100%;
+            border-bottom: 2px solid #ff6d00;
+        }
+        .member p {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .member:hover {
+            transform: scale(1.05);
+        }
+        /* Nút thuyết trình */
+        .presentation {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #0066cc;
+            color: #ffffff;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .presentation:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Thanh tiêu đề -->
+    <div class="header">
+        <img src="img/Screenshot 2024-10-31 111431.png" alt="Shopee logo">
+        <h1>NHÓM 9</h1>
+        <div class="header-icons">
+            🛒<span style="font-size: 0.8em; vertical-align: super;">17</span> 💬
+        </div>
+    </div>
+
+    <!-- Thanh tìm kiếm ở chính giữa -->
+    <div class="search-bar">
+        <input type="text" placeholder="Nhập để tìm kiếm">
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <!-- Khối chính -->
+    <div class="container">
+        <h2>THÀNH VIÊN TRONG NHÓM</h2>
+        
+        <!-- Danh sách thành viên -->
+        <div class="members">
+            <div class="member" onclick="redirectToPage('http://127.0.0.1:5500/Long/modaucuaLong.html')">
+                <img src="img/Long.jpg" alt="Thành viên 1">
+                <p>Tạ Nhất Long</p>
+            </div>
+            <div class="member" onclick="redirectToPage('http://127.0.0.1:5500/Thuan/index.html')">
+                <img src="img/thuan.jpg" alt="Thành viên 2">
+                <p>Trần Đức Thuận</p>
+            </div>
+            <div class="member" onclick="redirectToPage('http://127.0.0.1:5500/Hoang/Hoang.html')">
+                <img src="img/Hoang.jpg" alt="Thành viên 3">
+                <p>Khúc Ngọc Huy Hoàng</p>
+            </div>
+            <div class="member" onclick="redirectToPage('http://127.0.0.1:5500/khoa/khoa.html')">
+                <img src="img/khoa.jpg" alt="Thành viên 4">
+                <p>Nguyễn Đăng Khoa</p>
+            </div>
+        </div>
+
+       
+        
+    </div>
+
+    <script>
+        function redirectToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>
